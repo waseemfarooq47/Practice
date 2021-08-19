@@ -5,56 +5,110 @@
     <title>First Task</title>
 </head>
 
-<body>
+<body style="margin: 0 50px;background: whitesmoke;">
     <center>
         <h1>My Profile</h1>
     </center>
     <hr />
     <center>
         <span><b><a href="#">Home</a></b></span> &nbsp;&nbsp;&nbsp;
-        <span><b><a href="#">About Me</a></b></span>&nbsp;&nbsp;&nbsp;
-        <span><b><a href="#">Contact Me</a></b></span>&nbsp;&nbsp;&nbsp;
-        <span><b><a href="#">Support</a></b></span>&nbsp;
+        <span><b><a href="#aboutme">About Me</a></b></span>&nbsp;&nbsp;&nbsp;
+        <span><b><a href="#myskills">My Skills</a></b></span>&nbsp;&nbsp;&nbsp;
+        <span><b><a href="#contactme">Contact Me</a></b></span>&nbsp;&nbsp;&nbsp;
     </center>
     <hr />
 
-    <center>
-        <img src="myimg.jpeg" alt="no image" width="400" height="400" />
+    <center style="text-align: center;margin: 40px 40px;">
+
+        <img src="myimg.jpeg" alt="no image" width="200" height="200" />
         <h2>Waseem Farooq</h2>
+        <p><b><i>Frontend Developer / Fullstack Developer</i></b></p>
+        <a href="https://www.facebook.com/wasimf3/"><img src="facebook.png" alt="facebook" height="30" width="30" /></a>
+        &nbsp;&nbsp;
+        <a href="https://github.com/waseemfarooq47"><img src="git.png" alt="git" height="30"
+                width="30" /></a>&nbsp;&nbsp;
+        <a href="https://stackoverflow.com/users/16664269/waseem-farooq"><img src="download.png" alt="git" height="30"
+                width="30" /></a>
     </center>
 
     <center>
-        <p>Frontend Developer</p>
-        <a href="https://www.facebook.com/wasimf3" target="_blank">
-            <img src="facebook.png" alt="fackbook" height="40" width="100">
-        </a>
-        <a href="https://github.com/waseemfarooq47" target="_blank">
-            <img src="git.png" alt="github" height="40" width="40" />
-        </a>
-        <a href="https://stackoverflow.com/users/16664269/waseem-farooq" target="_blank">
-            <img src="download.png" alt="stack overflow" height="40" width="40">
-        </a>
+
+        <div id="aboutme" style="margin-top: 50px;">
+            <hr />
+            <h2>About Me</h2>
+            <hr />
+
+            <p>
+                <b><i>I am very keen to learn new technologies and also a nature lover.</i></b>
+            </p>
+            <p style="text-align: center;margin: 10px 40px;">
+                I want to become a Full stack developer in future.
+                Those looking to work as Full Stack Developers should have following assets:<br />
+                coding skills, analytical thinking, customer focus, attention to details, patience, accuracy, and time
+                management.<br />
+                Do put your experience first and your education second, unless you just graduated.Do show
+                your
+                soft skills in your bullet point descriptions of your duties at previous jobs.
+            </p>
+        </div>
+    </center>
 
 
-        <p>
-            I am very keen to learn new technologies and also a nature lover.
-        </p>
-        <p>
-            I want to become a Full stack developer in future.
-            Those looking to work as Full Stack Developers should have following assets:<br />
-            coding skills, analytical thinking, customer focus, attention to details, patience, accuracy, and time
-            management.
-        </p>
-    </center>
-    <hr />
     <center>
-        <h2>My Location</h2>
+
+        <div id="myskills" style="margin-top: 50px;">
+            <hr />
+            <h2>My Skills</h2>
+            <hr />
+            <div style="margin: 50px 0;">
+                <img src="html.png" alt="html" height="100" width="100" />&nbsp;&nbsp;&nbsp;
+                <img src="css.png" alt="css" height="100" width="200" />&nbsp;&nbsp;&nbsp;
+                <img src="js.png" alt="js" height="100" width="100" />&nbsp;&nbsp;&nbsp;
+                <img src="jquery.png" alt="jquery" height="100" width="100" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="sass.png" alt="sass" height="100" width="100" />
+            </div>
+
+        </div>
     </center>
-    <hr />
+
+
     <center>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13218.406971875203!2d74.83901575!3d34.0797221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1629355006479!5m2!1sen!2sin"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div id="contactme" style="margin-top: 50px;padding-bottom: 80px">
+            <hr />
+            <h2>Contact Me</h2>
+            <hr />
+
+            <div style="border: 2px solid #eee; min-height: 400px; width: 700px;margin-top: 50px;">
+                <form>
+                    <div style="padding-top: 40px;">
+                        <span>Your Name</span> <br />
+                        <input type="text" placeholder="Your Name" style="width: 500px;height: 40px" />
+                    </div>
+                    <div style="padding-top: 40px;">
+                        <span>Your Email</span> <br />
+                        <input type="mail" placeholder="Your Email" style="width: 500px;height: 40px" />
+                    </div>
+                    <div style="padding-top: 40px;">
+                        <span>Your Comments</span> <br />
+                        <textarea style="width: 500px;height: 130px">
+
+                        </textarea>
+                    </div>
+
+                    <div style="padding-top: 40px;padding-bottom: 50px;">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                </form>
+
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d819.0367645980637!2d74.83156800542956!3d34.07834008000985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1629372735421!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </div>
     </center>
 </body>
 
