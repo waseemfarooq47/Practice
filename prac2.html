@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>practice 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr />
+    <center>
+        <header>
+            <h1>Practicing Html 5 new tags </h1>
+            <a href="#video">Videos</a>
+            <a href="#lists">Lists</a>
+            <a href="#options">Options</a>
+        </header>
+    </center>
+    <hr />
+
+    <section id="video">
+
+        <!-- autoplay muted loop -->
+        <h3>Video tag</h3>
+        <video muted autoplay>
+            <source src="diljit.mp4" type="video/mp4">
+        </video>
+
+
+        <h3>Audio tag</h3>
+        <audio>
+            <source src="song.mp4" type="audio/mp4">
+        </audio>
+
+    </section>
+
+
+    <section id="lists">
+
+        <h1>ordered and unordered list </h1>
+        <!-- ordered unordered list -->
+        <ul type="circle">
+            <li>mango</li>
+            <li>grapes</li>
+            <li>banana</li>
+            <li>pear</li>
+            <li>pineapple</li>
+            <li>apple</li>
+        </ul>
+
+        <ol>
+            <li>peas</li>
+            <li>onion</li>
+            <li>radish</li>
+            <li>turnip</li>
+            <li>cauliflower</li>
+        </ol>
+
+        <h1>data lists </h1>
+
+        <dl>
+            <dt>Fruits</dt>
+            <dd>mango</dd>
+            <dd>grapes</dd>
+            <dd>grapes</dd>
+
+            <dt>Vegtables</dt>
+            <dd>radish</dd>
+            <dd>turnip</dd>
+            <dd>carrot</dd>
+        </dl>
+    </section>
+
+    <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d479.5567828542341!2d74.83285770864072!3d34.078598423804095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18f77542fe597%3A0xb76a2d3b514e5ea4!2sHotel%20Hill%20Skirt!5e0!3m2!1sen!2sin!4v1629780142428!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+    <section id="options">
+        <h1>select option , opt group </h1>
+
+        <select>
+            <option>home</option>
+            <option>contact</option>
+            <option>certificate</option>
+        </select>
+
+
+        <label for="laptop">Laptops</label>
+        <select name="laptop">
+            <optgroup label="HP">
+                <option>pavilion</option>
+                <option>inspiron</option>
+                <option>radiant</option>
+            </optgroup>
+
+            <optgroup label="MAC">
+                <option>mac air</option>
+                <option>mac pro</option>
+                <option>mac tab</option>
+            </optgroup>
+
+            <optgroup label="DEL">
+                <option>delXX</option>
+                <option>hybrid del</option>
+                <option>delta VV</option>
+            </optgroup>
+        </select><br /><br />
+
+    </section>
+
+    <section id="datalist">
+        <h1>Data List</h1>
+        <label>Select the city</label>
+        <input list="city">
+        <datalist id="city">
+            <option>Mumbai</option>
+            <option>Delhi</option>
+            <option>Agra</option>
+            <option>Jammu</option>
+            <option>Srinagar</option>
+            <option>Sopore</option>
+        </datalist>
+    </section>
+
+    <section id="table">
+        <h1>Table </h1>
+        <table cellspacing="2" cellpadding="2">
+
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>class</th>
+                    <th>subject</th>
+                    <th>marks</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>waseem</td>
+                    <td>matric</td>
+                    <td>computers</td>
+                    <td>67</td>
+                </tr>
+
+                <tr>
+                    <td>rouf</td>
+                    <td>garduation</td>
+                    <td>arts</td>
+                    <td>697</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+
+
+
+    <hr />
+    <center>
+        <footer>
+            <h3>&copy; Waseem Farooq @Developer</h3>
+        </footer>
+    </center>
+
+</body>
+
+</html>
