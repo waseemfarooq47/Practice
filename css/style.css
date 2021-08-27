@@ -1,0 +1,57 @@
+body {
+    background: #fff;
+}
+
+h1 {
+    color: #000;
+}
+
+.centerline {
+    text-align: center;
+    color: red;
+}
+
+.rightone {
+    text-align: right;
+    color: green;
+}
+
+.img-container {
+    text-align: center;
+    border: 2px solid #ccc;
+    height: 30%;
+    width: 100%;
+}
+
+.ffdiv {
+    overflow: scroll;
+}
+
+.floated-divs {
+    width: 22%;
+    height: 20%;
+    background: rgb(189, 186, 186);
+    padding: 4px;
+    float: left;
+    margin-left: 2%;
+}
+
+.oceanblue {
+    background: rgb(146, 241, 217);
+}
+
+.ftdiv {
+    background: rgb(174, 208, 224);
+}
+
+.fldiv {
+    background: rgb(129, 114, 144);
+}
+
+.inlined-divs {
+    width: 20%;
+    height: 20%;
+    padding: 4px;
+    display: inline-block;
+    overflow: scroll;
+}
