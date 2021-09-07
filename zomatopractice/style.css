@@ -39,6 +39,42 @@ body {
     background-image: url("image/indianfood.jpg");
     background-size: 100% 500px;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+.chef {
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    left: 51%;
+    top: 2%;
+}
+
+.offer {
+    left: 40%;
+}
+
+.runner {
+    left: 0%;
+    animation: run 3s infinite;
+}
+
+@keyframes run {
+    0% {
+        left: 0%;
+        opacity: 0.5;
+    }
+
+    30% {
+        left: 25%;
+    }
+    50% {
+        left: 40%;
+    }
+    60% {
+        left: 0%;
+    }
 }
 
 .spacer {
@@ -99,7 +135,7 @@ footer h4 {
 }
 
 .mcard-mainContainer {
-    height: 600px;
+    min-height: 600px;
     width: 80%;
     margin-left: 10%;
     padding: 10px;
@@ -176,4 +212,33 @@ footer h4 {
     font-size: 18px;
     color: #aba6a6;
     line-height: 24px;
+}
+
+@media screen and (max-width: 1555px) {
+    .selections {
+        width: 50% !important;
+    }
+
+    .selecteditems {
+        width: 100%;
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 1362px) {
+    .cards {
+        width: 46%;
+    }
+}
+
+@media screen and (min-width: 773px) {
+    .cards {
+        min-height: auto;
+    }
+}
+@media screen and (max-width: 600px) {
+    .runner,
+    .offer {
+        display: none !important;
+    }
 }
