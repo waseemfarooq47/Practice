@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 body {
     /* background-color: #23f500; */
@@ -289,4 +290,42 @@ footer h4 {
 .listchef img {
     height: 200px;
     width: 200px;
+}
+
+/* listing section */
+
+.listing-container {
+    min-height: 600px;
+    border: 2px solid purple;
+}
+
+.listing-cover {
+    width: 80%;
+    min-height: 600px;
+    margin-left: 10%;
+    border: 2px solid #ff23f4;
+}
+
+.left-list,
+.right-list {
+    width: 25%;
+    min-height: 400px;
+    float: left;
+    border: 2px solid #fbb2e3;
+}
+
+.right-list {
+    width: 65%;
+    float: left;
+    margin-left: 8%;
+}
+
+.list-eaterytag {
+    padding: 1%;
+}
+
+.list-eaterytag span {
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
 }
