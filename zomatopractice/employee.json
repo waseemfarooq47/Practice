@@ -1,0 +1,37 @@
+{
+  "employee": [
+    {
+      "eid": "A9SI1109",
+      "fname": "Mumin",
+      "lname": "Farooq",
+      "email": "waseemfarooq47@gmail.com",
+      "password": "12345",
+      "date": "2021-09-20",
+      "gender": "male",
+      "language": [
+        "JavaScript",
+        "React",
+        "Node"
+      ],
+      "comment": "best ",
+      "exp": "2",
+      "id": 1
+    },
+    {
+      "eid": "A9SI1109",
+      "fname": "Waqar ",
+      "lname": "jeelani",
+      "email": "example@gmail.com",
+      "password": "ghgh5",
+      "date": "2021-09-14",
+      "gender": "male",
+      "language": [
+        "JavaScript",
+        "React"
+      ],
+      "comment": "                        ji",
+      "exp": "3",
+      "id": 2
+    }
+  ]
+}

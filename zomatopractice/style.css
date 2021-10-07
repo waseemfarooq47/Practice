@@ -416,6 +416,47 @@ footer h4 {
     color: rgb(155, 155, 155);
 }
 
+.cal-cover {
+    min-height: 460px;
+    width: 290px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.76);
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+#resultbox {
+    height: 100px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#valbox1,
+#valbox2 {
+    height: 50px;
+}
+
+.butt button,
+.upp button {
+    width: 50px;
+    height: 50px;
+    border-radius: 27%;
+    margin-right: 3%;
+    border: none;
+    outline: none;
+    box-shadow: 10px 10px 12px #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.upp button {
+    width: 70px;
+    height: 40px;
+    border-radius: 8%;
+}
+
+/* form */
+
 @media screen and (max-width: 1555px) {
     .selections {
         width: 50% !important;
