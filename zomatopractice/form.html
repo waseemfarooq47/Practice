@@ -21,8 +21,54 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 bg-info p-3">
+            <div class="col-12  p-3">
+                <div class="col-lg-8 m-auto col-md-8 col-12 p-3 form-cover">
+                    <div class="col-12 mb-5 text-center  border-danger p-4 bg-danger top-heading">
+                        <h1>Welcome to Practice</h1>
+                    </div>
+                    <form action="homepage.html" name="myForm" onsubmit="return(formvalid())">
+                        <div class="row">
+                            <div class="col-lg-6 col-12 mb-3 form-group">
+                                <label for="fname"> Firstname</label>
+                                <input type="text" class="form-control" id="fname" name="Fname">
+                                <p class="text-danger err1" id="errormsg1">please provide first name</p>
+                            </div>
 
+                            <div class="col-lg-6 col-12 mb-3 form-group">
+                                <label for="lname"> Lastname</label>
+                                <input type="text" class="form-control" id="lname" name="Lname">
+                                <p class="text-danger err1" id="errormsg2">please provide last name</p>
+                            </div>
+
+                            <div class="col-lg-6 col-12 mb-3 form-group">
+                                <label for="email"> Email</label>
+                                <input type="text" class="form-control" id="email" required>
+                                <!-- <span class="err1 text-danger">This field cannot be empty</span> -->
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3 form-group">
+                                <label for="contact"> Contact</label>
+                                <input type="number" class="form-control" id="contact" name="Contact">
+                                <span class="err1 text-danger" id="errormsg3">Please provide the contact</span>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3 form-group">
+                                <label for="password"> Password</label>
+                                <input type="password" class="form-control" id="password" name="Password">
+                                <span class="err1 text-danger" id="errormsg4">Password cannot be empty</span>
+                            </div>
+                            <div class="col-lg-6 col-12 mb-3 form-group">
+                                <label for="cpass"> Confirm Password</label>
+                                <input type="text" class="form-control" id="cpass">
+                                <span class="err1 text-danger"></span>
+                            </div>
+                            <div class="col-lg-12 col-12 mb-5 form-group">
+                                <label for="comment">Your Comments</label>
+                                <textarea name="" id="comment" cols="30" rows="5" class="form-control"></textarea>
+                            </div>
+                            <button class="btn btn-success col-3 m-auto" type="submit">Submit</button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>

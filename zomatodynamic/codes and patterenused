@@ -1,0 +1,52 @@
+
+// dyannamic using API call
+
+var url = "https://developerfunnel.herokuapp.com/location";
+// var hotelUrl = "https://developerfunnel.herokuapp.com/hotels?city=";
+
+// const getCity = () => {
+// ********METHOD 1**********
+// fetch(url).then((res) => res.json())
+//     .then((item) => {
+//         for (i = 0; i < item.length; i++) {
+//             let element = document.createElement("option");
+//             let text = document.createTextNode(`${item[i].city_name}   |   ${item[i].country_name}`)
+//             element.appendChild(text);
+//             element.value = item[i]._id;
+//             document.getElementById("city").appendChild(element)
+//         }
+//     })
+
+
+//*********METHOD 2 using mapping********* */
+// fetch(url).then((res) => res.json())
+//     .then((data) => {
+//         data.map((items) => {
+//             var element = document.createElement("option");
+//             var text = document.createTextNode(`${items.city_name}`);
+//             element.appendChild(text);
+//             document.getElementById("city").appendChild(element);
+//         })
+//     })
+
+//*********METHOD 3 using async********* */
+
+// }
+
+
+
+
+// another way using Async function
+
+async function getCity() {
+    var response = await fetch(url);
+    var data = await response.json();
+
+    data.map((items) => {
+        var element = document.createElement("option");
+        var text = document.createTextNode(`${items.city_name}`);
+        element.appendChild(text);
+        element.value = items._id;
+        document.getElementById("city").appendChild(element);
+    })
+}

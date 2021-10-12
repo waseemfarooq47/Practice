@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.navbar {
+    background: #a70f0f;
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-weight: 900 !important;
+    letter-spacing: 1.45px;
+    font-size: 28px;
+}
+
+.nav-item {
+    min-width: 125px;
+    text-align: center;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.social-links > a > img {
+    width: 45px;
+    height: 45px;
+}
+
+/* banner */
+
+.banner {
+    height: 600px;
+    background-image: url("image/indianfood.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+}
+.logo {
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    border-radius: 50%;
+    margin-top: 7% !important;
+    overflow: hidden;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.842);
+    animation: shake 0.9s;
+    animation-iteration-count: infinite;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.tagbanner-cover {
+    margin-top: 3% !important;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.76);
+}
+
+.tagbanner-cover span {
+    font-size: 33px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.selections {
+    width: 70% !important;
+    height: 55px;
+}
+
+.select-cover {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.sel2 {
+    justify-content: start !important;
+}
+
+.footerdet {
+    padding: 0;
+    text-align: left;
+    color: #fff;
+}
+
+.footerdet li:first-child {
+    padding-top: 14%;
+}
+
+.footerdet li {
+    list-style-type: none;
+    padding-top: 4%;
+}
+
+.footerdet li h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footerdet li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.search-tagline {
+    color: #192f60;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.search-subtag {
+    color: gray;
+    font-size: 20px;
+}
+
+.rounded-start {
+    height: 100%;
+}
+
+.card {
+    border: 2px solid rgba(167, 165, 165, 0.924);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: all 1s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: 12px 12px 15px rgb(51, 50, 50);
+    border-radius: 30px 0;
+    border: 2px solid transparent;
+}
+
+.card-title {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.side-by {
+    height: 180px;
+}
+
+.side-by img {
+    width: 100%;
+    height: 100%;
+}
+
+.new-jumbo {
+    height: 190px;
+    background-image: url("image/jumbo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 190px;
+    border-radius: 12px;
+}
+.jumbotag,
+.restaurant-names {
+    margin-top: 5%;
+    font-size: 47px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.restaurant-names {
+    margin-top: 5% !important;
+    color: #000;
+}
+.jumbosubtag {
+    text-align: center;
+    color: #fff;
+}
+
+.ratings {
+    font-size: 10px;
+    color: rgb(151, 151, 151);
+}
+
+.fill {
+    color: #efd93c;
+}
+
+.unfill {
+    color: #000;
+}
+
+.orderbtn {
+    height: 36px !important;
+}
+
+.ctop {
+    height: 160px;
+}
+
+.jumbocover {
+    background: rgba(0, 0, 0, 0.76);
+}
+
+.footer-cover {
+    background: rgb(0 0 0 / 76%);
+}
+.footname {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#offercoupon {
+    position: absolute;
+    height: 480px;
+    width: 658px;
+    margin-left: 29%;
+    margin-top: 5%;
+    background: rgba(0, 0, 0, 0.76);
+    border: 2px solid #fff;
+    border-radius: 8px;
+    z-index: 3;
+    display: none;
+}
+
+#hideoffer {
+    border: none;
+    outline: none;
+}
+
+.coupon-cover {
+    background: whitesmoke;
+}
+
+#appliedcoupon {
+    display: none;
+}
+
+#succes-msg {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    .selections {
+        width: 100% !important;
+    }
+
+    .jumbotag,
+    .restaurant-names {
+        font-size: 29px;
+    }
+}
