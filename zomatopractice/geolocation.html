@@ -1,0 +1,149 @@
+<html>
+<head>
+    <title>Geo location</title>
+    <script src="location.js" type="text/JavaScript"></script>
+    <style>
+
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+        body {
+            margin: 0;
+            padding: 0;
+            background: whitesmoke;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+        }
+        #container{
+            background: url("weather.jpg");
+            background-size: 100% 90vh;
+            background-repeat: no-repeat;
+            width: 1300px;
+            height:90vh;
+            margin: 40px auto;
+            padding: 20px;
+            /* background: pink; */
+            text-align: center;
+
+           
+        }
+
+        .row{
+           
+            width: 600px;
+            height:50vh;
+            padding: 50px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.856);
+            border-radius: 5px;
+        }
+
+        #cities{
+            width: 500px;
+            height: 50px;
+            border:2px solid  rgb(255, 145, 0);
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .card{
+            margin: 60px auto;
+            width: 500px;
+            min-height: 120px;
+            border:2px solid  #ff9100;
+            border-radius: 5px;
+            font-family: "Poppins", sans-serif;
+            color: #ff9100;
+        }
+
+        #name{
+            letter-spacing: 1.34px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <button onclick="weatherdata()">Geo Location</button> -->
+
+    <div id="container">
+
+        <div class="row">
+            <h2></h2>
+                <select class="formSelect" aria-label="cities" id="cities" onchange="getselected()">
+                    <option value="">select city</option>
+                    <option value="mumbai">mumbai</option>
+                    <option value="jammu and kashmir">jammu and kashmir</option>
+                    <option value="delhi">delhi</option>
+                    <option value="kolkata">kolkata</option>
+                    <option value="goa">goa</option>
+                    <option value="chennai">chennai</option>
+                    <option value="rajasthan">rajasthan</option>
+                    <option value="jaipur">jaipur</option>
+                    
+                </select>
+            
+                <!-- <input type="text"  class="formSelect"> -->
+                <!-- <button class="button">Send</button> -->
+                <div class="card">
+                <h3 id="name"></h3>
+                <h1 id="temp"></h1>
+                <p id="descp"></p>
+                </div>
+                </div>
+                
+          
+         
+    </div>
+    
+
+
+    <script>   
+        // const API_KEY='1704f93bba5885cd1007a18435ed608a';
+        // let sel=document.getElementById("cities").value;    
+        // let inp=document.querySelector(".formSelect");
+        // let name=document.querySelector(".name");
+        // let temper=document.querySelector(".temp");
+        // let descrip=document.querySelector(".descp");
+        // let butt=document.querySelector(".button");
+
+
+        // butt.addEventListener('click',function(){
+        //     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${sel}&appid=${API_KEY}`)
+        //     .then(res => res.json())
+        //     .then(data=>{
+        //         console.log(data)
+        //         let cityName=data['name']+' '+data['sys']['country'];
+        //         let temperature=data['main']['temp'];
+        //         let description=data['weather'][0]['main']+'   '+data['weather'][0]['description'];
+        //         name.innerHTML=cityName;
+        //         temper.innerHTML=temperature;
+        //         descrip.innerHTML=description; &#8451;
+
+        //     })
+        // })
+
+
+
+        var getselected=()=>{
+        const API_KEY='1704f93bba5885cd1007a18435ed608a';
+        let sel=document.getElementById("cities").value;
+        // let inp=document.querySelector(".formSelect");
+        
+            if(navigator.geolocation){
+                fetch(`http://api.openweathermap.org/data/2.5/weather?q=${sel}&appid=${API_KEY}`)
+                .then(response => response.json())
+                .then(data => {
+
+                        console.log(data);
+                        document.getElementById("name").innerHTML=data.name+'  '+data.sys.country;
+                        document.getElementById("temp").innerHTML=Math.floor(data.main.temp-273.15)+' &#8451;';  
+                        document.getElementById("descp").innerHTML=data.weather[0].main +' <br/>description : &#129146; '+data.weather[0].description;
+                    
+                })
+            }else{
+                document.getElementById("descp").innerHTML="OOps something went wrong!! "
+            }   
+        }
+   
+    </script>
+</body>
+</html>
