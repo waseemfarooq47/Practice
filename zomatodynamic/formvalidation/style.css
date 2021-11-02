@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+#main-con-cover {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgQlQl8EmeP2oVhKJi4mh1Qf6SOOEqphqpnjemb2QaheqsD1b390unXQOvToD3LbtZsHY&usqp=CAU");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#vieweye{
+    position: absolute;
+    top: 36px;
+    right: 28px;
+    font-size: 22px;
+    color: red;
+}

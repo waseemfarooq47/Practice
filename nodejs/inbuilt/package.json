@@ -1,0 +1,19 @@
+{
+  "name": "mypack",
+  "version": "1.0.0",
+  "description": "this is new app node",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node staticApi.js",
+    "dev": "nodemon staticApi.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "waseem farooq",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.14"
+  }
+}

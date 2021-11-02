@@ -69,7 +69,7 @@ const getHotels = () => {
     }
 
 
-    fetch(`${hotelUrl}${selected}`, { methos: "GET" }).then((res) => res.json()).then((data) => {
+    fetch(`${hotelUrl}${selected}`, { method: "GET" }).then((res) => res.json()).then((data) => {
         data.map((items) => {
             var element = document.createElement("option");
             var text = document.createTextNode(`${items.name}${items.locality}`);
