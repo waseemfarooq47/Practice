@@ -1,0 +1,4 @@
+steps for express
+
+create env file
+create js file 

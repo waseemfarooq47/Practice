@@ -1,0 +1,16 @@
+{
+  "name": "npractice",
+  "version": "1.0.0",
+  "description": "this is practice never mind",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node http.js",
+    "dev": "nodemon myfile.js"
+  },
+  "author": "waseem farooq",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
+

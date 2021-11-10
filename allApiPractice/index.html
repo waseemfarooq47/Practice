@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Api fetch in js</title>
+    <script src="index.js" type="text/javascript"></script>
+</head>
+<body>
+        <h1>How to fetch APi data using js</h1>
+        <div>
+            <label>Cities</label>
+            <select id="newcity" onchange="getHotels()">
+                <option value="">select city</option>
+            </select>
+        </div>
+        <div style="padding-top: 40px;">
+            <label>Hotels</label>
+            <select id="hotels">
+                <option>select hotel</option>   
+            </select>
+        </div>
+
+
+        <script>
+          window.onload=getCity();
+        </script>
+        
+</body>
+</html>
