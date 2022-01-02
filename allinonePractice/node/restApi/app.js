@@ -17,6 +17,7 @@ app.get('/',(req,res)=>{
     res.send("this is from express")
 })
 
+//return all the city
 app.get('/location',(req,res)=>{
     db.collection('location').find().toArray((err,result)=>{
         if (err) throw error
@@ -24,6 +25,7 @@ app.get('/location',(req,res)=>{
     }) 
 })
 
+//return all the mealtype
 app.get('/mealtype',(req,res)=>{
     db.collection("mealtype").find().toArray((err,result)=>{
         if (err) throw err;
@@ -31,14 +33,29 @@ app.get('/mealtype',(req,res)=>{
     })
 })
 
-app.get("/restaurant",(req,res)=>{  // we can route other pages to route on same url
-    db.collection("restaurantdata").find().toArray((err,result)=>{
+//return all the menus
+app.get("/menu",(req,res)=>{  // we can route other pages to route on same url
+    db.collection("menu").find().toArray((err,result)=>{
         if (err) throw err;
         res.send(result)
     })
     
 })
 
+app.get('/orders',(req,res)=>{
+    db.collection('orders').find().toArray((err,result)=>{
+        if (err) throw err;
+        res.send(result)
+    })
+})
+
+//return all the restaurants
+app.get('/restaurants',(req,res)=>{
+    db.collection('restaurants').find().toArray((err,result)=>{
+        if (err) throw err;
+        res.send(result)
+    })
+})
 
 MongoClient.connect(mongoUrl,(err,client)=>{
     if (err) console.log("error while connecting")
