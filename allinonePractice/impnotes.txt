@@ -1,0 +1,23 @@
+node is single threaded , async ,non-blocking I/O.
+
+code ==> machine >> byte
+
+_____NPM______
+node package manager
+
+_____install node_____
+
+_______make package_______
+>> open terminal
+>> navigate tetminal
+>> type npm initial
+>> answer Questions "yes"
+
+______gitignore_____
+.. to ignore somefiles while push in git
+
+
+
+
+
+

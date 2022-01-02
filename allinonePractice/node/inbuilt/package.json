@@ -1,0 +1,17 @@
+{
+  "name": "mypackage",
+  "version": "1.0.0",
+  "description": "this is inbuilt manual package",
+  "main": "fs.js",
+  "scripts": {
+    "start": "node staticApi.js",
+    "dev": "nodemon staticApi.js"
+  },
+  "keywords": [
+    "git",
+    "node",
+    "api"
+  ],
+  "author": "waseem farooq",
+  "license": "ISC"
+}

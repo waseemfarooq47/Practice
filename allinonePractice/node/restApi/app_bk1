@@ -1,0 +1,25 @@
+var express=require('express');
+var fs=require('fs');
+var dotenv=require('dotenv');
+var app= express();
+dotenv.config();
+var port=process.env.PORT|| 6662
+
+
+//default route
+app.get('/',(req,res)=>{
+    res.send("this is from express")
+})
+
+app.get('/location',(req,res)=>{
+    fs.readFile('Mealtypes.json','utf-8',(err,data)=>{
+        if (err) throw err;
+        console.log(data);
+    })
+    res.send(data)
+})
+
+app.listen(port,()=>{
+    console.log(`listening to port ${port}`)
+})
+

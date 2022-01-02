@@ -1,0 +1,45 @@
+* every command should run on client (mongo)
+>>>>To see all databases
+> show dbs
+
+>>>>To create databases
+> use databasename (use augintern)
+
+>>>>To create collections
+> db.user.insert({Name:"Ankit",City:"Delhi",Phone:464655})
+
+>>>>> Go inside existing dbs
+> use augintern
+
+>>>>To see all collections
+show collections
+
+>>>>To see data in collection
+db.user.find()
+
+* Every record have one unique value by the name of _id
+> _id should always have unique values
+> if you will not pass _id it will take as default values
+> else we can also give our own _id value
+> 12 byte
+
+
+
+>>>> how to connect database 
+>>1 install package mongodb (var mongo=require ("mongodb))
+>>2 MongoClient   (var MongoClient = MongoClient.mongo)
+>>3 port   (var mongoUrl= process.env.MongoUrl) //this should be of env mongourl
+
+
+*** connection creation****
+var db;
+
+
+MongoClient.connect(mongoUrl,(err,client)=>{
+    if (err) console.log("error message")
+    db=client.db("database name")
+
+    app.listen(port,()=>{
+        console.log(`listening tp port ${port}`)
+    })
+})

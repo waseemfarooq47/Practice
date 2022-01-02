@@ -1,0 +1,7 @@
+>>> installed express package > make object  
+            var app=express();
+
+>>> installed dotenv package
+            dotenv.config();  
+            *** here order matters port should be below dotenv
+
