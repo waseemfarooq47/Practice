@@ -25,6 +25,7 @@ app.get('/location',(req,res)=>{
     }) 
 })
 
+
 //return all the mealtype
 app.get('/mealtype',(req,res)=>{
     db.collection("mealtype").find().toArray((err,result)=>{
@@ -56,6 +57,16 @@ app.get('/restaurants',(req,res)=>{
         res.send(result)
     })
 })
+
+//return restaurant wrt id
+app.get('/restaurants/:id',(req,res)=>{
+    var id=parseInt(req.params.id);
+    db.collection('restaurants').find({'restaurant_id':id}).toArray((err,result)=>{
+        if (err) throw err;
+        res.send(result)
+    })
+})
+
 
 MongoClient.connect(mongoUrl,(err,client)=>{
     if (err) console.log("error while connecting")

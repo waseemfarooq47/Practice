@@ -28,7 +28,7 @@ Page2(Listing Page)
 
 Page3(Details Page)
 > Get the details of restaurant on basis of Id
-()  >>>>>>>>>>>>>>>>>>
+(http://localhost:6661/restaurants/3)  >>>>>>>>>>>>>>>>>>done
 
 > Menu wrt to restaurant ()
 (return all items of menu for particular restaurant)
