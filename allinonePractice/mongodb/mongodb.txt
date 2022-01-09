@@ -70,3 +70,34 @@ db.zomato.find({$and:[{cost:{$gt:500,$lt:1000}}]},{restaurant_name:1,cost:1})
 
 // in between using in keyword for among multiple 
  db.menu.find({menu_id:{$in:[6,48,3]}}).pretty()
+
+
+
+ ////////////////limit //////////////////
+  db.zomato.find({},{restaurant_name:1,cost:1}).limit(5).pretty()
+
+  ////////////////count //////////////////
+  db.zomato.count({"mealTypes.mealtype_id":1})
+
+//////////////// sort //////////////////
+>>>in postve asending .sort({cost:1})
+>>>in negative decenging .sort({cost:-1})
+
+  db.zomato.find({},{restaurant_name:1,cost:1}).limit(5).sort({cost:1}).pretty()
+
+
+
+  //////delete/////
+
+  db.zomato.remove({}) removes all 
+  db.zomato.remove({id:1})
+
+
+  ///update//////////
+  ()
+{
+	"status":"Delivered",
+	"date":"2021-08-19%2021:32:37.0",
+	"bank_status":"TXN_SUCCESS",
+	"bank":"Bharat%20Bank"
+}
