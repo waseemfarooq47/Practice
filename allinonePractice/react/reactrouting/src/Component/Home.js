@@ -1,13 +1,24 @@
-import React,{Fragment} from 'react';
+import React, { Fragment } from 'react';
 
-const Home=()=>{
-    return(
+const Home = () => {
+    return (
 
-        <Fragment>
-              
-                <h1> Home page</h1>
-            
-        </Fragment>  
+        <div className="row">
+            <div className="col-12">
+                <div class="card text-center">
+                    <div class="card-header bg-primary">
+                        <h3>Homepage</h3>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">This is homepage !!! </p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        be Happy!!
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 export default Home
