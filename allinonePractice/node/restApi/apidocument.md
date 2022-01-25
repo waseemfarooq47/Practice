@@ -49,18 +49,18 @@ local(http://localhost:6661/menu/2)
 ****POST CALL*****
 
 Page4(Summary Page)
-> Menu wrt to all ids (post)> ()
+> Menu wrt to all ids (post)> (https://kashkart.herokuapp.com/menuItems)
 local(http://localhost:6661/menuItems)
 (provides item in basis of id)
 
 > Post the order
-(Insert order details in db)
+(Insert order details in db)>(https://kashkart.herokuapp.com/placeOrder)
 local(http://localhost:6661/placeOrder)
 ()
   
 
 
-/// update order with payment detail
+/// update order with payment detail(https://kashkart.herokuapp.com/updateStatus/11)
 local(http://localhost:6661/updateStatus/11)
 "status":"delivered",
 "date":"2021-08-19%2021:32:37.0",
@@ -68,11 +68,11 @@ local(http://localhost:6661/updateStatus/11)
 "bank":"Bharat%20Bank"
 ()
 
-/// delete orders
+/// delete orders(https://kashkart.herokuapp.com/deleteOrders)
 local(http://localhost:6661/deleteOrders)
 ()
 
 
-Page5(Order Page)
+Page5(Order Page)(https://kashkart.herokuapp.com/orders)
 > List all the order placed >>>>>>>>>>>>>>>>>>done
 (http://localhost:6661/orders)
