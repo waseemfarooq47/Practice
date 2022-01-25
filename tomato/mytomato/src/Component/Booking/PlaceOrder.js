@@ -1,15 +1,27 @@
 import React, { Component } from 'react';
 
-const menuUrl = "https://xomato.herokuapp.com/menuItem";
-const placeOrder = "https://xomato.herokuapp.com/placeOrder"
+// const menuUrl = "https://kashkart.herokuapp.com/menuItem";
+// const placeOrder = "https://kashkart.herokuapp.com/placeOrder"
 
 class PlaceOrder extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            id:Math.floor(Math.random()*100000),
+            hotel_name:this.props.match.params.restName,
+            name:'',
+            phone:'',
+            email:'',
+            cost:0,
+            address:'',
+            meniIds:''
         }
     }
+
+    handleChange =(event)=>{
+
+    }
+
     render() {
         return (
             <div className="container">
@@ -22,7 +34,27 @@ class PlaceOrder extends Component {
                                         <div className="col-6">
                                             <div className="form-control">
                                                 <label>Name</label>
-                                                {/* <input className="form-control"  */}
+                                                <input className="form-control" name="name" value={this.state.name} onChange={this.handleChange}/>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-6">
+                                            <div className="form-control">
+                                                <label>Email</label>
+                                                <input className="form-control" name="email" value={this.state.email} onChange={this.handleChange}/>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-6">
+                                            <div className="form-control">
+                                                <label>Phone</label>
+                                                <input className="form-control" name="phone" value={this.state.phone} onChange={this.handleChange}/>
+                                            </div>
+                                        </div>
+                                        <div className="col-6">
+                                            <div className="form-control">
+                                                <label>Address</label>
+                                                <input className="form-control" name="address" value={this.state.address} onChange={this.handleChange}/>
                                             </div>
                                         </div>
                                     </div>
