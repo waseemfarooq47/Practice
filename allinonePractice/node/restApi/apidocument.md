@@ -68,7 +68,7 @@ local(http://localhost:6661/updateStatus/11)
 "bank":"Bharat%20Bank"
 ()
 
-/// delete orders(https://kashkart.herokuapp.com/deleteOrders)
+/// delete orders(https://kashkart.herokuapp.com/deleteOrder)
 local(http://localhost:6661/deleteOrders)
 ()
 

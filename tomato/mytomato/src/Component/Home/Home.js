@@ -1,10 +1,10 @@
-import React,{Component} from "react";
+import React from "react";
 import QuickSearch from './QuickSearch'
 import Search from './Search'
 import './Home.css'
 
-class Home extends Component {
-    render(){
+const Home =(props)=>{
+        console.log(">>>home",props)
         return(
             <>
                 <Search/>
@@ -12,5 +12,5 @@ class Home extends Component {
             </>
         )
     }
-}
+
 export default Home

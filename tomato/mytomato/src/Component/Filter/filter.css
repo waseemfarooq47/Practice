@@ -1,0 +1,12 @@
+.radioButton{
+    margin-left:30px;
+}
+
+.radioButton > label{
+    text-align: left;
+    font-size:16px;
+}
+
+.radioButton > label >input{
+    padding-left:15px;
+}

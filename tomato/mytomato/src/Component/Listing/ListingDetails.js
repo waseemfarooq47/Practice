@@ -3,8 +3,10 @@ import {Link} from 'react-router-dom'
 const ListingDetails = (props) => {
     const renderData = ({ restData }) => {
         if (restData) {
-            return restData.map((item)=>{
+            if(restData.length > 0) {
 
+            
+            return restData.map((item)=>{
             return (
                 <>
                 <div className="col-12 mt-3">
@@ -34,8 +36,14 @@ const ListingDetails = (props) => {
                  </div>   
                 </>
             )
-
             })
+        }else{
+            return(
+                <div>
+                    <h3>No Data Found</h3>
+                </div>
+            )
+        }  
         }else{
             return(
                 <div>
