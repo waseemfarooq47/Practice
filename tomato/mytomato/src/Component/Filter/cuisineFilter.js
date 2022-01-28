@@ -23,8 +23,10 @@ class CuisineFilter extends Component {
     render(){
         return(
             <div>
-                <center>Cuisine Filter</center>
-                <div className="radioButton " onChange={this.cuisineFilter}>
+                <div className="bg-light text-danger mt-4 cuisine-flt p-2">
+                    <center>Cuisine Filter</center>
+                </div>
+                <div className="radioButton mt-3" onChange={this.cuisineFilter}>
                     <label class="radio col-12 ">
                         <input type="radio" name="cuisine" value=""/> All
                     </label>

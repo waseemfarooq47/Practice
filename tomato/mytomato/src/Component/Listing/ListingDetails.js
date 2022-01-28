@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './listingDetails.css'
 const ListingDetails = (props) => {
     const renderData = ({ restData }) => {
         if (restData) {
@@ -12,9 +13,9 @@ const ListingDetails = (props) => {
                 <div className="col-12 mt-3">
                     <div className="card">
                         <div class="row g-0">
-                            <div class="col-md-4" style={{backgroundColor:"#5e5e5e"}}>
+                            <div class="col-md-4" style={{backgroundColor:"#000000"}}>
                                 <img src={item.restaurant_thumb} class="img-fluid rounded-start" alt={item.restaurant_name} style={{height:"150px",width:"100%"}}/>
-                                <div className="text-center rate-text pt-4">{item.rating_text}</div>
+                                <div className="text-center rate-text pt-5 text-danger">{item.rating_text}</div>
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -39,7 +40,7 @@ const ListingDetails = (props) => {
             })
         }else{
             return(
-                <div>
+                <div className="alert alert-danger text-center" role="alert">
                     <h3>No Data Found</h3>
                 </div>
             )

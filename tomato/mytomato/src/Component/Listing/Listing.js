@@ -28,19 +28,19 @@ class Listing extends Component {
             <Header/>
                 <div className="listing-container">
                     <div className="listing-cover">
-                        <div className="list-eaterytag">
-                            <span>Breakfast Places in Manali</span>
+                        <div className="list-eaterytag col-12 p-3 text-center bg-dark">
+                            <span>Listing Page</span>
                         </div>
-                        <div className="left-list">
-                            <div className="filter-sort  text-center">
-                                Filter / Sort <hr/>
+                        <div className="left-list mt-4">
+                            <div className="filter-sort">
+                                <div className="col-12 title-sort bg-dark p-3 text-center">Filter / Sort</div>
                                 <CuisineFilter mealId={this.props.match.params.id} restPerCuisine={(data)=>{this.setPerFilter(data)}}/>
                                 <CostFilter restPerCost={(data)=>{this.setPerFilter(data)}}/>
                                 <SortFilter restPerSort={(data)=>{this.setPerFilter(data)}}/>
 
                             </div>
                         </div>
-                        <div className="right-list">
+                        <div className="right-list mt-4">
                             <ListingDetails   restData={this.state.restId}/>
                         </div>
 

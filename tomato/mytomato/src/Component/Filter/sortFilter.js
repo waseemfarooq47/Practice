@@ -25,7 +25,9 @@ class SortFilter extends Component {
             
             <div>
                 <hr/>
+                <div className="bg-light text-danger mt-4 cuisine-flt p-2">
                 <center>Sort Filter</center>
+                </div>
                 <div className="radioButton " onChange={this.sortFilter}>
                     <label class="radio col-12">
                         <input type="radio" name="cuisine" value="-1"/> High To Low

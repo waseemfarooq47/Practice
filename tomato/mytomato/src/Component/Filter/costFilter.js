@@ -1,46 +1,50 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import './filter.css'
 import axios from 'axios';
 
 // const url ="https://kashkart.herokuapp.com/filter/3?cuisine=3";
-const url ="https://kashkart.herokuapp.com/filter";
+const url = "https://kashkart.herokuapp.com/filter";
 
 class CostFilter extends Component {
 
-    costFilter =(event)=>{
-       let mealId = sessionStorage.getItem('mealId');
+    costFilter = (event) => {
+        let mealId = sessionStorage.getItem('mealId');
         let cost = (event.target.value).split('-')
         let lcost = cost[0];
         let hcost = cost[1]
         let filterUrl;
-        if(event.target.value === ""){
+        if (event.target.value === "") {
             filterUrl = `${url}/${mealId}`
-        }else{
+        } else {
             filterUrl = `${url}/${mealId}?lcost=${lcost}&hcost=${hcost}`
         }
         axios.get(filterUrl)
-        .then((res) => {this.props.restPerCost(res.data)})
+            .then((res) => { this.props.restPerCost(res.data) })
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                <center>Cost Filter</center>
+                <hr />
+                <div className="bg-light text-danger mt-4 cuisine-flt p-2">
+                    <center>Cost Filter</center>
+                </div>
+
                 <div className="radioButton " onChange={this.costFilter}>
                     <label class="radio col-12 ">
-                        <input type="radio" name="cuisine" value=""/> All
+                        <input type="radio" name="cuisine" value="" /> All
                     </label>
                     <label class="radio col-12">
-                        <input type="radio" name="cuisine" value="100-300"/> 100-300
+                        <input type="radio" name="cuisine" value="100-300" /> 100-300
                     </label>
                     <label class="radio col-12">
-                        <input type="radio" name="cuisine" value="301-500"/> 301-500
+                        <input type="radio" name="cuisine" value="301-500" /> 301-500
                     </label>
                     <label class="radio col-12">
-                    <input type="radio" name="cuisine" value="501-700"/>501-700
+                        <input type="radio" name="cuisine" value="501-700" /> 501-700
                     </label>
                     <label class="radio col-12">
-                    <input type="radio" name="cuisine" value="701-1500"/>701-1500
+                        <input type="radio" name="cuisine" value="701-1500" /> 701-1500
                     </label>
                 </div>
             </div>
