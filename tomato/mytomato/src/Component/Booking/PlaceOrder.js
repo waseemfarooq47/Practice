@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './placeOrder.css'
+import Header from '../Header';
 const menuUrl = "https://kashkart.herokuapp.com/menuItem";
 const placeOrder = "https://kashkart.herokuapp.com/placeOrder"
 
@@ -9,9 +10,9 @@ class PlaceOrder extends Component {
         this.state = {
             id: Math.floor(Math.random() * 100000),
             rest_name: this.props.match.params.restName,
-            name: 'waseem',
-            phone: '1234',
-            email: 'waseem@xx.com',
+            name:localStorage.getItem('userdata')?localStorage.getItem('userdata').split(',')[0]:'',
+            phone:localStorage.getItem('userdata')?localStorage.getItem('userdata').split(',')[2]:'',
+            email:localStorage.getItem('userdata')?localStorage.getItem('userdata').split(',')[1]:'',
             cost: 0,
             address: 'hno223',
             menuItems: ''
@@ -56,7 +57,20 @@ class PlaceOrder extends Component {
 
 
     render() {
+        if(localStorage.getItem('ltk') == null){
+            return(
+                <>
+                <Header/>
+                <h2>Login First to Place Booking</h2>
+                </>
+            )
+           
+
+        }
         return (
+            <>
+                <Header/>
+            
             <div className="container">
                 <div className="row">
                     <div className="col-12">
@@ -111,6 +125,7 @@ class PlaceOrder extends Component {
                     </div>
                 </div>
             </div>
+            </>
         )
     }
 

@@ -32,9 +32,13 @@ body {
     padding-right: 2%;
 }
 
-.social-logo > img {
-    height: 50px;
-    width: 50px;
+.auth-btn{
+    height: 30px !important;
+    width: 95px !important;
+    margin-top: 9%;
+    margin-left: 10px;
+    float: left;
+    font-size: 13px !important;
 }
 
 

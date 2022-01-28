@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ListingDetails from './ListingDetails'
+import Header from '../Header';
 import './Listing.css'
 import axios from 'axios'
 import CuisineFilter from '../Filter/cuisineFilter'
@@ -24,6 +25,7 @@ class Listing extends Component {
     render() {
         return (
             <>
+            <Header/>
                 <div className="listing-container">
                     <div className="listing-cover">
                         <div className="list-eaterytag">

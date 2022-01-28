@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import axios from 'axios';
 import ViewDisplay from './viewDisplay'
+import Header from '../Header';
 const bookUrl="https://kashkart.herokuapp.com/orders"
 const putUrl ="https://kashkart.herokuapp.com/orderStatus"
 
@@ -14,8 +15,19 @@ class viewApi extends Component {
     }
 
     render(){
+        if(localStorage.getItem('ltk') == null){
+            return(
+                <>
+                <Header/>
+                <h2>Login First to See Booking</h2>
+                </>
+            )
+        }
         return (
+            <>
+            <Header/>
             <ViewDisplay  bookData={this.state.orders}/> 
+            </>
         )
         
     }

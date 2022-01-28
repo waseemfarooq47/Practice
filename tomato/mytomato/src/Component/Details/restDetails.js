@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import axios from 'axios';
 import MenuList from './menuDetail'
+import Header from '../Header';
 const url = "https://kashkart.herokuapp.com/restaurants"
 const menuUrl="https://kashkart.herokuapp.com/menu"
 
@@ -31,6 +32,7 @@ class Details extends Component {
         let { details } = this.state;
         return (
             <>
+                <Header/>
                 <div className=" container">
                     <div className="row">
                         <div className="col-12">
