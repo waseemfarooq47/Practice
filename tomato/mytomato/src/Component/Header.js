@@ -48,7 +48,7 @@ class Header extends Component {
                 <header className="main-header bg-dark">
                     <div className="logo">
                         <Link to="/">
-                        <span className="logoname"><a href="#">Tomato!</a></span>
+                        <span className="logoname"><a href="#">Food Hunger!</a></span>
                         </Link>
                         
                         
