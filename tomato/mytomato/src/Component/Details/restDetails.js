@@ -37,16 +37,18 @@ class Details extends Component {
                     <div className="row">
                         <div className="col-12">
                             <div className="card mt-4">
-                                <div class="card-header">
-
+                                <div class="card-header bg-dark menu-det pt-3">
+                                        <h4>Menu Details</h4>
                                 </div>
                                 <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src={details.restaurant_thumb} class="img-fluid rounded-start" alt={details.restaurant_name} />
+                                    <div class="col-md-4 mimg-cover">
+                                        <div className="round-div">
+                                            <img src={details.restaurant_thumb} class="img-fluid rounded-start" alt={details.restaurant_name}  style={{height:"100%"}}/>
+                                        </div>
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-8 text-center">
                                         <div class="card-body">
-                                            <h5 class="card-title">{this.state.details.restaurant_name}</h5>
+                                            <h5 class="card-title menu-ccdet">{this.state.details.restaurant_name}</h5>
                                             <p>
                                                 <i className="fas fa-star checked"></i>
                                                 <i className="fas fa-star checked"></i>
@@ -82,7 +84,7 @@ class Details extends Component {
                                 </div>
                                 <div class="card-footer">
                                     <Tabs>
-                                        <TabList>
+                                        <TabList className="tab-tags">
                                             <Tab>Details</Tab>
                                             <Tab>Contact</Tab>
                                             <Tab>Menu</Tab>

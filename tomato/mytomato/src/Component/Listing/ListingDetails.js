@@ -48,7 +48,7 @@ const ListingDetails = (props) => {
         }else{
             return(
                 <div>
-                    <img src="/image/loader.gif" alt="loader"/>
+                    <img src="/image/loaders.gif" alt="loader"/>
                 </div>
             )
         }
