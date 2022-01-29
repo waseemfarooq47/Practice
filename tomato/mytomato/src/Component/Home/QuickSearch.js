@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import QuickDisplay from './QuickDisplay';
 import './QuickSearch.css';
-const mealUrl="https://eaterr.herokuapp.com/mealtype"
+const mealUrl="https://kashkart.herokuapp.com/mealtype"
 
 class QuickSearch extends Component {
     constructor(props) {
