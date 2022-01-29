@@ -82,7 +82,7 @@ class Details extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-footer">
+                                <div class="card-footer pt-4 pb-5">
                                     <Tabs>
                                         <TabList className="tab-tags">
                                             <Tab>Details</Tab>
@@ -90,14 +90,14 @@ class Details extends Component {
                                             <Tab>Menu</Tab>
                                         </TabList>
 
-                                        <TabPanel>
-                                            <h4>{details.restaurant_name}</h4>
-                                            <p>
-                                                Alexa help me in study when during the study some problems come me and due to this problem I am not able to understand stund thise law then I tall this problem to Alexa then Alaxa Explain the solution of the problem in a lay man language for the help of my Alexa teacher i am top in the science subject Alexa is my favourite teacher who naver beat me by strick
+                                        <TabPanel className="p-2">
+                                            <h4 className="menu-restname">{details.restaurant_name}</h4>
+                                            <p className="menudet">
+                                            {details.restaurant_name} Good time, Great taste Expect the best Eat healthy, Live more Food, Folks and Our Quality is best The magic grill Food at first sight Dreamy Taste.One thousand flavors in one place.Taste is our identity Where food speaks with your palate.I know what is good.Only for foodies Like Mom’s house
                                             </p>
                                         </TabPanel>
-                                        <TabPanel>
-                                            <h4>{details.address}</h4>
+                                        <TabPanel className="p-2">
+                                            <h4 className="menu-restname">{details.address}</h4>
                                             <h5>For Contact:  (900 2334 900)</h5>
                                         </TabPanel>
                                         <TabPanel>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header';
-// import './placeOrder.css'
+import './login.css'
 // const loginUrl = "http://localhost:5000/api/auth/login";
 const loginUrl = "https://developerjwt.herokuapp.com/api/auth/login";
 
@@ -49,28 +49,27 @@ class Login extends Component {
             <Header/>
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
-                        <div className="card">
-                            <div className="card-header bg-success text-white">Login</div>
+                    <div className="col-md-6 col-12 m-auto mt-5">
+                        <div className="card pb-3">
+                            <div className="card-header log-title bg-dark  text-white text-center">Login</div>
                             <div className="card-body">
                                 <div className="row">
                                     <h5 className="text-danger">{this.state.message}</h5>
-                                    <div className="col-6">
-                                        <div className="form-control">
+                                    <div className="col-12">
+                                        <div className="form-control log-cc">
                                             <label>Email</label>
                                             <input className="form-control" name="email" value={this.state.email} onChange={this.handleChange} />
-                                        </div>
-                                    </div>
-                                    <div className="col-6">
-                                        <div className="form-control">
-                                            <label>Password</label>
+                                            <label className="pt-4">Password</label>
                                             <input className="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
                                         </div>
                                     </div>
+                                    <div className="col-12 text-center mt-5">
+                                        <button className="btn btn-success mn-btn" onClick={this.handleSubmit}>
+                                            <i className="fa fa-sign-in me-3"></i>Login
+                                        </button>
+                                    </div>
                                 
-                                    <button className="btn btn-success" onClick={this.handleSubmit}>
-                                        Login
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>

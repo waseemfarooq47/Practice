@@ -46,9 +46,13 @@ class PlaceOrder extends Component {
         if (data) {
             return data.map((item, index) => {
                 return (
-                    <div className="orderItems" key={index}>
-                        <img src={item.img} alt={item.name} />
-                        <h3>{item.name}</h3>
+                    <div className="orderItems pt-5" key={index}>
+                        <div className="img-cprd">
+                          <img src={item.img} alt={item.name} />  
+                        </div>
+                        <div className="ord-name pt-3 text-center">
+                            {item.name}
+                        </div>
                     </div>
                 )
             })
@@ -61,7 +65,11 @@ class PlaceOrder extends Component {
             return(
                 <>
                 <Header/>
-                <h2>Login First to Place Booking</h2>
+
+                    <div className="col-md-8 col-12 m-auto mt-4 alert alert-danger text-center" role="alert">
+                        <h4>Login First to Place Booking</h4>
+                    </div>
+                
                 </>
             )
            
@@ -73,51 +81,56 @@ class PlaceOrder extends Component {
             
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
-                        <div className="card">
-                            <div className="card-header bg-primary text-white">Place Orders</div>
+                    <div className="col-12 pt-5 ">
+                        <div className="card pb-5">
+                            <div className="card-header pp-title bg-dark text-white p-3 text-center">Place Orders</div>
                             <div className="card-body">
                                 <form action="http://zompay.herokuapp.com/paynow" method="post">
                                 <div className="row">
-                                    <div className="col-6">
-                                        <div className="form-control">
+                                    <div className="col-6 mt-3">
+                                        <div className="form-control plc-crd">
                                             <label>Name</label>
                                             <input className="form-control" name="name" value={this.state.name} onChange={this.handleChange} />
                                         </div>
                                     </div>
 
-                                    <div className="col-6">
-                                        <div className="form-control">
+                                    <div className="col-6 mt-3">
+                                        <div className="form-control plc-crd">
                                             <label>Email</label>
                                             <input className="form-control" name="email" value={this.state.email} onChange={this.handleChange} />
                                         </div>
                                     </div>
 
-                                    <div className="col-6">
-                                        <div className="form-control">
+                                    <div className="col-6 mt-3">
+                                        <div className="form-control plc-crd">
                                             <label>Phone</label>
                                             <input className="form-control" name="phone" value={this.state.phone} onChange={this.handleChange} />
                                         </div>
                                     </div>
-                                    <div className="col-6">
-                                        <div className="form-control">
+                                    <div className="col-6 mt-3">
+                                        <div className="form-control plc-crd">
                                             <label>Address</label>
                                             <input className="form-control" name="address" value={this.state.address} onChange={this.handleChange} />
                                         </div>
                                     </div>
+                                    <div className="col-12 mt-5">
                                     {this.renderItems(this.state.menuItems)}
                                     <input type="hidden" name="amount" value={this.state.cost} />
                                     <input type="hidden" name="id" value={this.state.id} />
                                     <input type="hidden" name="hotel_name" value={this.state.rest_name} />
+                                    </div>
                                     <div className="row">
-                                        <div className="col-md-12">
-                                            <h2>Total Cost is Rs.{this.state.cost}</h2>
+                                        <div className="col-md-6 col-12  ord-costt p-3 m-auto mt-4 text-center bg-light">
+                                            <h2 className="pt-3">Total Cost is : 	<span className="text-dark mn-amount">&#8377;{this.state.cost}</span></h2>
                                         </div>
                                     </div>
-                                    <button className="btn btn-success" onClick={this.handleSubmit}
-                                        type="submit">
-                                        Place order
-                                    </button>
+                                    <div className="text-center mt-3">
+                                        <button className="btn btn-success text-center mn-btn" onClick={this.handleSubmit}
+                                            type="submit">
+                                            <i className="fa fa-first-order fa-spin me-2 "></i>Place order
+                                        </button>
+                                    </div>
+                                   
                                 </div>
                                 </form>
                             </div>

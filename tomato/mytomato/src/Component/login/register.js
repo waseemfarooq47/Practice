@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header';
-// import './placeOrder.css'
+import './login.css'
 // const registerUrl = "http://localhost:5000/api/auth/register";
 const registerUrl = "https://developerjwt.herokuapp.com/api/auth/register";
 
@@ -10,7 +10,7 @@ class Register extends Component {
         this.state = {
             
             name:'Your Name',
-            phone:'00000000000',
+            phone:'',
             email:'example@example.com',
             password:''
         }
@@ -41,41 +41,34 @@ class Register extends Component {
            
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-md-6 col-12 m-auto  mt-5">
                         <div className="card">
-                            <div className="card-header bg-primary text-white">Registrtaion</div>
+                            <div className="card-header log-title bg-dark  text-white text-center">Registrtaion</div>
                             <div className="card-body">
                                 <div className="row">
-                                    <div className="col-6">
-                                        <div className="form-control">
+                                    <div className="col-md-10 col-12 m-auto">
+                                        <div className="form-control log-cc">
                                             <label>Name</label>
                                             <input className="form-control" name="name" value={this.state.name} onChange={this.handleChange} />
-                                        </div>
-                                    </div>
 
-                                    <div className="col-6">
-                                        <div className="form-control">
-                                            <label>Email</label>
+                                            <label className="pt-4">Email</label>
                                             <input className="form-control" name="email" value={this.state.email} onChange={this.handleChange} />
-                                        </div>
-                                    </div>
 
-                                    <div className="col-6">
-                                        <div className="form-control">
-                                            <label>Phone</label>
+                                            <label className="pt-4">Phone</label>
                                             <input className="form-control" name="phone" value={this.state.phone} onChange={this.handleChange} />
-                                        </div>
-                                    </div>
-                                    <div className="col-6">
-                                        <div className="form-control">
-                                            <label>Password</label>
+                                            
+                                            <label className="pt-4">Password</label>
                                             <input className="form-control" name="password" value={this.state.password} onChange={this.handleChange} />
                                         </div>
                                     </div>
+
+                                    <div className="col-12 text-center mt-4">
+                                        <button className="btn btn-success mn-btn" onClick={this.handleSubmit}>
+                                        <i className="fa fa-users me-3"></i>Register
+                                        </button>
+                                    </div>
                                 
-                                    <button className="btn btn-success" onClick={this.handleSubmit}>
-                                        Register
-                                    </button>
+                                    
                                 </div>
                             </div>
                         </div>
